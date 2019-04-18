@@ -106,7 +106,7 @@ $('#highlight_tab').click(() => {
 // popup主动发消息给content-script
 $('#send_message_to_content_script').click(() => {
   sendMessageToContentScript('开始更新图片！', response => {
-    if (response) alert($('title').text());
+    if (response) alert(response);
   });
 });
 

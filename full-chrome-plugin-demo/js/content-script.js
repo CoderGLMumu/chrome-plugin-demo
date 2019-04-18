@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < objs.length; i++) {
       objs[i].setAttribute('_target', 'blank');
     }
-    console.log('已处理！');
+    console.log($('title').text() + '已处理！');
   } else if (location.host == 'vcp.jd.com') {
     function fuckBaiduAD() {
       if (document.getElementById('my_custom_css')) return;

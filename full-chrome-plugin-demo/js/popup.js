@@ -105,8 +105,8 @@ $('#highlight_tab').click(() => {
 
 // popup主动发消息给content-script
 $('#send_message_to_content_script').click(() => {
-  sendMessageToContentScript('你好，我是popup！', response => {
-    if (response) alert('收到来自content-script的回复：' + response);
+  sendMessageToContentScript('开始更新图片！', response => {
+    if (response) alert($('title').text());
   });
 });
 
@@ -114,7 +114,7 @@ $('#send_message_to_content_script').click(() => {
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   console.log('收到来自content-script的消息：');
   console.log(request, sender, sendResponse);
-  sendResponse('我是popup，我已收到你的消息：' + JSON.stringify(request));
+  sendResponse('已收到的内容：' + JSON.stringify(request));
 });
 
 // popup与content-script建立长连接

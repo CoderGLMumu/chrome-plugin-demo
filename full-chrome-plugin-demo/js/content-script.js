@@ -54,7 +54,7 @@ function initCustomPanel() {
   var panel = document.createElement('div');
   panel.className = 'chrome-plugin-demo-panel';
   panel.innerHTML = `
-		<h2>injected-script操作content-script演示区：</h2>
+		<h2>JS入驻测试：</h2>
 		<div class="btn-area">
 			<a href="javascript:sendMessageToContentScriptByPostMessage('你好，我是普通页面！')">通过postMessage发送消息给content-script</a><br>
 			<a href="javascript:sendMessageToContentScriptByEvent('你好啊！我是通过DOM事件发送的消息！')">通过DOM事件发送消息给content-script</a><br>
